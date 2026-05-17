@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-bg-page text-ink font-sans antialiased;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+/* Smooth focus rings */
+*:focus-visible {
+  @apply outline-none ring-2 ring-primary/40 ring-offset-2 ring-offset-bg-page rounded-md;
+}
+
+/* Scrollbar polish */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Terminal block — dots */
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+/* Code styling */
+.code-block {
+  @apply bg-bg-code text-code-fg font-mono text-sm leading-relaxed;
+}
+
+.code-token-key {
+  color: #f59e0b;
+}
+.code-token-value {
+  color: #93c5fd;
+}
+.code-token-comment {
+  color: #6b7280;
+  font-style: italic;
+}
+.code-token-string {
+  color: #86efac;
+}
+.code-token-tag {
+  color: #f472b6;
+}
+
+/* Print styles for the recap */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+  }
+  .print-area,
+  .print-area * {
+    visibility: visible;
+  }
+  .print-area {
+    position: absolute;
+    inset: 0;
+    padding: 24px;
+  }
+}
