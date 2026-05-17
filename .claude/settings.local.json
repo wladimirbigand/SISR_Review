@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npm run *)",
+      "Bash(curl -sS -o /dev/null -w \"HelpTooltip: %{http_code}\\\\n\" \"http://localhost:5173/SISR_Review/src/components/UI/HelpTooltip.jsx\")",
+      "Bash(curl -sS -o /dev/null -w \"CodeBlock: %{http_code}\\\\n\" \"http://localhost:5173/SISR_Review/src/components/Situation/CodeBlock.jsx\")",
+      "Bash(curl -sS -o /dev/null -w \"StepViewer: %{http_code}\\\\n\" \"http://localhost:5173/SISR_Review/src/components/Situation/StepViewer.jsx\")"
+    ]
+  }
+}
